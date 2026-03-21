@@ -1,7 +1,7 @@
 package br.com.senai.s042.autoescolas042.application.core.validation.instrucao.agendamento;
 
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.instrucao.DadosAgendamentoInstrucao;
-import br.com.senai.s042.autoescolas042.application.core.domain.instrucao.InstrucaoRepository;
+import br.com.senai.s042.autoescolas042.application.port.out.InstrucaoRepository;
 import br.com.senai.s042.autoescolas042.application.core.validation.instrucao.interfaces.ValidadorAgendamento;
 import br.com.senai.s042.autoescolas042.exception.types.instrucao.ValidacaoException;
 import org.springframework.beans.factory.annotation.Autowired;

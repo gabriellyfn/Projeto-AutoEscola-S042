@@ -1,6 +1,6 @@
 package br.com.senai.s042.autoescolas042.application.core.validation.instrucao.agendamento;
 
-import br.com.senai.s042.autoescolas042.application.core.domain.aluno.AlunoRepository;
+import br.com.senai.s042.autoescolas042.application.port.out.AlunoRepository;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.instrucao.DadosAgendamentoInstrucao;
 import br.com.senai.s042.autoescolas042.application.core.validation.instrucao.interfaces.ValidadorAgendamento;
 import br.com.senai.s042.autoescolas042.exception.types.instrucao.ValidacaoException;

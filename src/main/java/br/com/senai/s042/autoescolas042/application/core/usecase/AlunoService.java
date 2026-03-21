@@ -1,8 +1,10 @@
-package br.com.senai.s042.autoescolas042.application.core.domain.aluno;
+package br.com.senai.s042.autoescolas042.application.core.usecase;
 
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.aluno.DadosAtualizacaoAluno;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.aluno.DadosCadastroAluno;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.response.aluno.DadosListagemAluno;
+import br.com.senai.s042.autoescolas042.application.core.domain.model.Aluno;
+import br.com.senai.s042.autoescolas042.application.port.out.AlunoRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

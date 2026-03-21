@@ -2,18 +2,18 @@ package br.com.senai.s042.autoescolas042.application.core.usecase;
 
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.instrucao.DadosAgendamentoInstrucao;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.response.instrucao.DadosDetalhamentoInstrucao;
-import br.com.senai.s042.autoescolas042.application.core.domain.aluno.Aluno;
-import br.com.senai.s042.autoescolas042.application.core.domain.instrucao.Instrucao;
-import br.com.senai.s042.autoescolas042.application.core.domain.instrucao.InstrucaoRepository;
+import br.com.senai.s042.autoescolas042.application.core.domain.model.Aluno;
+import br.com.senai.s042.autoescolas042.application.core.domain.model.Instrucao;
+import br.com.senai.s042.autoescolas042.application.port.out.InstrucaoRepository;
 import br.com.senai.s042.autoescolas042.application.core.domain.enums.instrucao.StatusInstrucao;
 import br.com.senai.s042.autoescolas042.exception.types.aluno.AlunoNaoExisteException;
-import br.com.senai.s042.autoescolas042.application.core.domain.aluno.AlunoRepository;
+import br.com.senai.s042.autoescolas042.application.port.out.AlunoRepository;
 import br.com.senai.s042.autoescolas042.application.core.validation.instrucao.interfaces.ValidadorAgendamento;
-import br.com.senai.s042.autoescolas042.application.core.domain.instrutor.Instrutor;
+import br.com.senai.s042.autoescolas042.application.core.domain.model.Instrutor;
 import br.com.senai.s042.autoescolas042.exception.types.instrucao.EspecialidadeNaoInformadaException;
 import br.com.senai.s042.autoescolas042.exception.types.instrucao.InstrutorIndisponivelException;
 import br.com.senai.s042.autoescolas042.exception.types.instrutor.InstrutorNaoExisteException;
-import br.com.senai.s042.autoescolas042.application.core.domain.instrutor.InstrutorRepository;
+import br.com.senai.s042.autoescolas042.application.port.out.InstrutorRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package br.com.senai.s042.autoescolas042.application.core.validation.instrucao.cancelamento;
 
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.instrucao.DadosCancelamentoInstrucao;
-import br.com.senai.s042.autoescolas042.application.core.domain.instrucao.Instrucao;
+import br.com.senai.s042.autoescolas042.application.core.domain.model.Instrucao;
 import br.com.senai.s042.autoescolas042.application.core.validation.instrucao.interfaces.ValidadorCancelamento;
 import org.springframework.stereotype.Component;
 

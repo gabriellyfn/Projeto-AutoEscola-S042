@@ -4,8 +4,8 @@ import br.com.senai.s042.autoescolas042.adapter.in.controller.request.usuario.Da
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.usuario.DadosCadastroUsuarios;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.response.usuario.DadosDetalhamentoUsuario;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.response.usuario.DadosListagemUsuarios;
-import br.com.senai.s042.autoescolas042.application.core.domain.usuario.Usuario;
-import br.com.senai.s042.autoescolas042.application.core.domain.usuario.UsuarioRepository;
+import br.com.senai.s042.autoescolas042.application.core.domain.model.Usuario;
+import br.com.senai.s042.autoescolas042.application.port.out.UsuarioRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

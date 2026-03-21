@@ -4,7 +4,7 @@ import br.com.senai.s042.autoescolas042.adapter.in.controller.request.instrucao.
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.instrucao.DadosCancelamentoInstrucao;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.response.instrucao.DadosDetalhamentoInstrucao;
 import br.com.senai.s042.autoescolas042.application.core.usecase.AgendaDeInstrucoes;
-import br.com.senai.s042.autoescolas042.application.core.domain.instrucao.CancelamentoDeInstrucoes;
+import br.com.senai.s042.autoescolas042.application.core.usecase.CancelamentoDeInstrucoes;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

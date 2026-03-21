@@ -1,9 +1,7 @@
-package br.com.senai.s042.autoescolas042.application.core.domain.instrucao;
+package br.com.senai.s042.autoescolas042.application.core.domain.model;
 
-import br.com.senai.s042.autoescolas042.application.core.domain.aluno.Aluno;
 import br.com.senai.s042.autoescolas042.application.core.domain.enums.instrucao.MotivoCancelamento;
 import br.com.senai.s042.autoescolas042.application.core.domain.enums.instrucao.StatusInstrucao;
-import br.com.senai.s042.autoescolas042.application.core.domain.instrutor.Instrutor;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,7 +21,7 @@ public class Instrucao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "aluno_id")
     private Aluno aluno;
 

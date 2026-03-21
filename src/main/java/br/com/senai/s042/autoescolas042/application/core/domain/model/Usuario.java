@@ -1,4 +1,4 @@
-package br.com.senai.s042.autoescolas042.application.core.domain.usuario;
+package br.com.senai.s042.autoescolas042.application.core.domain.model;
 
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.usuario.DadosAtualizacaoUsuario;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.usuario.DadosCadastroUsuarios;

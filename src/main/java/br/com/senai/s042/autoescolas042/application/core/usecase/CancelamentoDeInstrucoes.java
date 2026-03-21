@@ -1,11 +1,13 @@
-package br.com.senai.s042.autoescolas042.application.core.domain.instrucao;
+package br.com.senai.s042.autoescolas042.application.core.usecase;
 
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.instrucao.DadosCancelamentoInstrucao;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.response.instrucao.DadosDetalhamentoInstrucao;
-import br.com.senai.s042.autoescolas042.application.core.domain.aluno.AlunoRepository;
+import br.com.senai.s042.autoescolas042.application.core.domain.model.Instrucao;
+import br.com.senai.s042.autoescolas042.application.port.out.AlunoRepository;
 import br.com.senai.s042.autoescolas042.application.core.domain.enums.instrucao.StatusInstrucao;
 import br.com.senai.s042.autoescolas042.application.core.validation.instrucao.interfaces.ValidadorCancelamento;
-import br.com.senai.s042.autoescolas042.application.core.domain.instrutor.InstrutorRepository;
+import br.com.senai.s042.autoescolas042.application.port.out.InstrutorRepository;
+import br.com.senai.s042.autoescolas042.application.port.out.InstrucaoRepository;
 import br.com.senai.s042.autoescolas042.exception.types.instrucao.InstrucaoNaoExisteException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

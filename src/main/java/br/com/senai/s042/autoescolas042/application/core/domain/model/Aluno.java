@@ -1,4 +1,4 @@
-package br.com.senai.s042.autoescolas042.application.core.domain.aluno;
+package br.com.senai.s042.autoescolas042.application.core.domain.model;
 
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.aluno.DadosAtualizacaoAluno;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.aluno.DadosCadastroAluno;
@@ -33,9 +33,6 @@ public class Aluno {
     private String telefone;
     private String cpf;
 
-    @Enumerated(EnumType.STRING)
-    private Especialidade especialidade;
-
     @Embedded
     private Endereco endereco;
     private Boolean ativo = true;
@@ -48,6 +45,18 @@ public class Aluno {
         this.especialidade = dadosAluno.especialidade();
         this.endereco = new Endereco(dadosAluno.endereco());
     }
+
+    //provisorio
+    public Aluno(DadosCadastroAluno dados){
+        this.id = null;
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.telefone = dados.telefone();
+        this.cpf = dados.cpf();
+        this.endereco = dados.endereco();
+        this.ativo = true;
+    }
+
 
     public void atualizarInformacoes(DadosAtualizacaoAluno dadosAtualizacaoAluno) {
         if (dadosAtualizacaoAluno.nome() != null && !dadosAtualizacaoAluno.nome().isBlank()) {

@@ -1,6 +1,6 @@
 package br.com.senai.s042.autoescolas042.adapter.in.controller.response.usuario;
 
-import br.com.senai.s042.autoescolas042.application.core.domain.usuario.Usuario;
+import br.com.senai.s042.autoescolas042.application.core.domain.model.Usuario;
 
 public record DadosListagemUsuarios(
         Long id,

@@ -1,6 +1,6 @@
 package br.com.senai.s042.autoescolas042.adapter.in.controller.response.aluno;
 
-import br.com.senai.s042.autoescolas042.application.core.domain.aluno.Aluno;
+import br.com.senai.s042.autoescolas042.application.core.domain.model.Aluno;
 import br.com.senai.s042.autoescolas042.application.core.domain.enums.Especialidade;
 
 public record DadosListagemAluno(

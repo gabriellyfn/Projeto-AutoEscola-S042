@@ -2,15 +2,9 @@ package br.com.senai.s042.autoescolas042.application.core.domain.vo;
 
 import br.com.senai.s042.autoescolas042.application.core.domain.dto.DadosEndereco;
 import jakarta.persistence.Embeddable;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 @Embeddable
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-public class Endereco { // nenhuma classe conseguira herdar nada dessa
+public class Endereco {
     private String logradouro;
     private String numero;
     private String complemento;
@@ -19,38 +13,74 @@ public class Endereco { // nenhuma classe conseguira herdar nada dessa
     private String uf;
     private String cep;
 
-    public Endereco(DadosEndereco dados) {
-        this.logradouro = dados.logradouro();
-        this.numero = dados.numero();
-        this.complemento = dados.complemento();
-        this.bairro = dados.bairro();
-        this.cidade = dados.cidade();
-        this.uf = dados.uf();
-        this.cep = dados.cep();
+    public Endereco(){}
+
+    public Endereco(String logradouro,
+                    String numero,
+                    String complemento,
+                    String bairro,
+                    String cidade,
+                    String uf,
+                    String cep) {
+        this.logradouro = logradouro;
+        this.numero = numero;
+        this.complemento = complemento;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.uf = uf;
+        this.cep = cep;
     }
 
-    public void atualizarInformacoes(DadosEndereco dados) {
-        if(dados.logradouro() != null){
-            this.logradouro = dados.logradouro();
-        }
-        if(dados.numero() != null){
-            this.numero = dados.numero();
-        }
-        if(dados.complemento() != null){
-            this.complemento = dados.complemento();
-        }
-        if(dados.bairro() != null){
-            this.bairro = dados.bairro();
-        }
-        if(dados.cidade() != null){
-            this.cidade = dados.cidade();
-        }
-        if(dados.uf() != null){
-            this.uf = dados.uf();
-        }
-        if(dados.cep() != null){
-            this.cep = dados.cep();
-        }
+    public String getLogradouro() {
+        return logradouro;
     }
 
+    public String getNumero() {
+        return numero;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getUf() {
+        return uf;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+
+    public void atualizarInformacoes(Endereco endereco) {
+        if(endereco.logradouro != null){
+            this.logradouro = endereco.logradouro;
+        }
+        if(endereco.numero != null){
+            this.numero = endereco.numero;
+        }
+        if(endereco.complemento != null){
+            this.complemento = endereco.complemento;
+        }
+        if(endereco.bairro != null){
+            this.bairro = endereco.bairro;
+        }
+        if(endereco.cidade != null){
+            this.cidade = endereco.cidade;
+        }
+        if(endereco.uf != null){
+            this.uf = endereco.uf;
+        }
+        if(endereco.cep!= null){
+            this.cep = endereco.cep;
+        }
+    }
 }

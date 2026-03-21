@@ -1,5 +1,6 @@
-package br.com.senai.s042.autoescolas042.application.core.domain.instrucao;
+package br.com.senai.s042.autoescolas042.application.port.out;
 
+import br.com.senai.s042.autoescolas042.application.core.domain.model.Instrucao;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDateTime;

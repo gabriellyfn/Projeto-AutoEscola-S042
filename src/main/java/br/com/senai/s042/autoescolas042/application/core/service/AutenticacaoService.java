@@ -1,6 +1,6 @@
 package br.com.senai.s042.autoescolas042.application.core.service;
 
-import br.com.senai.s042.autoescolas042.application.core.domain.usuario.UsuarioRepository;
+import br.com.senai.s042.autoescolas042.application.port.out.UsuarioRepository;
 import jakarta.annotation.Nonnull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
