@@ -170,7 +170,7 @@ http://localhost:8080
 
 ---
 
-## 🔐 Com Spring Security
+🔐 Com Spring Security
 Cliente → Filtro → Controller → Service → Repository
 
 ✔ Segurança centralizada
@@ -178,12 +178,21 @@ Cliente → Filtro → Controller → Service → Repository
 
 ---
 
-##🧩 Arquitetura Hexagonal (Ports & Adapters)
-        [ Adapters (Controller, DB, APIs) ]
-                     ↓
-               [ Domínio ]
-                     ↑
-              [ Portas (Interfaces) ]
+🧩 Arquitetura Hexagonal (Ports & Adapters)
+            +-----------------------------+
+            |        Adapters             |
+            | (Controller, DB, APIs)     |
+            +-------------+---------------+
+                          |
+                          v
+                  +---------------+
+                  |    Domínio    |
+                  +---------------+
+                          ^
+                          |
+            +-------------+---------------+
+            |     Portas (Interfaces)     |
+            +-----------------------------+
 
 ✔ Baixo acoplamento
 ✔ Domínio isolado
