@@ -14,7 +14,7 @@ public class Instrutor {
     private Endereco endereco;
     private Boolean ativo = true;
 
-    public Instrutor(){}
+    public Instrutor() {}
 
     public Instrutor(Long id,
                      String nome,

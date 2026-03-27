@@ -13,7 +13,7 @@ public class Endereco {
     private String uf;
     private String cep;
 
-    public Endereco(){}
+    public Endereco(DadosEndereco endereco){}
 
     public Endereco(String logradouro,
                     String numero,

@@ -3,11 +3,8 @@ package br.com.senai.s042.autoescolas042.application.core.domain.model;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.aluno.DadosAtualizacaoAluno;
 import br.com.senai.s042.autoescolas042.adapter.in.controller.request.aluno.DadosCadastroAluno;
 import br.com.senai.s042.autoescolas042.application.core.domain.vo.Endereco;
-import br.com.senai.s042.autoescolas042.application.core.domain.enums.Especialidade;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -37,23 +34,13 @@ public class Aluno {
     private Endereco endereco;
     private Boolean ativo = true;
 
-    public Aluno(DadosCadastroAluno dadosAluno) {
-        this.nome = dadosAluno.nome();
-        this.email = dadosAluno.email();
-        this.telefone = dadosAluno.telefone();
-        this.cpf = dadosAluno.cpf();
-        this.especialidade = dadosAluno.especialidade();
-        this.endereco = new Endereco(dadosAluno.endereco());
-    }
-
-    //provisorio
     public Aluno(DadosCadastroAluno dados){
         this.id = null;
         this.nome = dados.nome();
         this.email = dados.email();
         this.telefone = dados.telefone();
         this.cpf = dados.cpf();
-        this.endereco = dados.endereco();
+        this.endereco = new Endereco(dados.endereco());
         this.ativo = true;
     }
 
@@ -64,7 +51,7 @@ public class Aluno {
         } if (dadosAtualizacaoAluno.telefone() != null && !dadosAtualizacaoAluno.telefone().isBlank()) {
             this.telefone = dadosAtualizacaoAluno.telefone();
         } if (dadosAtualizacaoAluno.endereco() != null) {
-            this.endereco.atualizarInformacoes(dadosAtualizacaoAluno.endereco());
+            this.endereco.atualizarInformacoes(endereco);
         }
     }
 

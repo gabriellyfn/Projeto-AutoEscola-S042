@@ -41,7 +41,7 @@ public class InstrutorRepositoryImpl implements InstrutorRepository {
     @Override
     public Boolean findAtivoById(Long id) {
         Boolean ativo = repository.findAtivoById(id);
-        return null;
+        return ativo;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class InstrutorRepositoryImpl implements InstrutorRepository {
 
     @Override
     public Optional<Instrutor> findById(Long id) {
-        return Optional.empty();
+        return repository.findById(id).map(mapper::toDomain);
     }
 
     @Override
@@ -62,5 +62,9 @@ public class InstrutorRepositoryImpl implements InstrutorRepository {
         return mapper.toDomain(entity);
     }
 
-
+    @Override
+    public boolean existsById(Long id) {
+        Boolean exist = repository.existsById(id);
+        return exist;
+    }
 }

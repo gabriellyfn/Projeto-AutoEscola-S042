@@ -7,17 +7,14 @@ public record DadosListagemAluno(
         Long id,
         String nome,
         String email,
-        String cpf,
-        Boolean ativo,
-        Especialidade especialidade) {
+        String cpf)
+{
 
     public DadosListagemAluno(Aluno aluno){
         this(aluno.getId(),
                 aluno.getNome(),
                 aluno.getEmail(),
-                aluno.getCpf(),
-                aluno.getAtivo(),
-                aluno.getEspecialidade()
+                aluno.getCpf()
         );
     }
 }

@@ -14,4 +14,5 @@ public interface InstrutorRepository {
     Instrutor save(Instrutor instrutor);
     Optional<Instrutor> findById(Long id);
     Instrutor getReferenceById(Long id);
+    boolean existsById(Long aLong);
 }

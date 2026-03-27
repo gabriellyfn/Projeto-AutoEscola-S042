@@ -49,5 +49,4 @@ public class InstrutorMapper {
                 instrutor.getEspecialidade()
         );
     }
-
 }
