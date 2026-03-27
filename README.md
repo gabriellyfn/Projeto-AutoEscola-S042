@@ -13,7 +13,7 @@ Este projeto foi construído com foco em **boas práticas de desenvolvimento bac
 * Spring Data JPA
 * Hibernate (ORM)
 * Spring Security 🔐
-* Banco de Dados Relacional
+* Banco de Dados Relacional (MySQL)
 * Maven
 * Jakarta Persistence API (JPA)
 
@@ -165,7 +165,30 @@ http://localhost:8080
 * Consolidar conhecimentos em Spring Boot
 * Aplicar boas práticas utilizadas no mercado
 * Entender evolução arquitetural na prática
+* Camadas → Segurança → Hexagonal
 * Preparar base para sistemas mais escaláveis
+
+---
+
+## 🔐 Com Spring Security
+Cliente → Filtro → Controller → Service → Repository
+
+✔ Segurança centralizada
+✔ Interceptação automática
+
+---
+
+🧩 Arquitetura Hexagonal (Ports & Adapters)
+        [ Adapters (Controller, DB, APIs) ]
+                     ↓
+               [ Domínio ]
+                     ↑
+              [ Portas (Interfaces) ]
+
+✔ Baixo acoplamento
+✔ Domínio isolado
+✔ Alta testabilidade
+✔ Escalável
 
 ---
 
